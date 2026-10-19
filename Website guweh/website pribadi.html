@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="id" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timothy V.B — Portofolio & Personal Branding</title>
+    <!-- Google Fonts: Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome untuk Ikon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            blue: '#2563eb',
+                            dark: '#0f172a',
+                            cardDark: '#1e293b',
+                            grayDark: '#334155'
+                        }
+                    },
+                    fontFamily: {
+                        poppins: ['Poppins', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Hubungkan file CSS eksternal -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-slate-900 text-slate-100 transition-colors duration-300 dark:bg-slate-900 dark:text-slate-100 bg-slate-50 text-slate-800">
+
+    <!-- NAVIGASI -->
+    <nav class="fixed top-0 left-0 w-full z-50 bg-slate-900/80 dark:bg-slate-900/80 bg-white/80 backdrop-blur-md border-b border-slate-800 transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="#hero" class="text-xl font-bold tracking-wider text-blue-600 dark:text-blue-500">TIMOTHY V.B</a>
+            
+            <div class="hidden md:flex items-center space-x-8 text-sm font-medium">
+                <a href="#tentang" class="hover:text-blue-500 transition">Tentang</a>
+                <a href="#layanan" class="hover:text-blue-500 transition">Keahlian</a>
+                <a href="#portofolio" class="hover:text-blue-500 transition">Portofolio</a>
+                <a href="#testimoni" class="hover:text-blue-500 transition">Testimoni</a>
+                <a href="#kontak" class="hover:text-blue-500 transition">Kontak</a>
+                <!-- Toggle Mode -->
+                <button id="theme-toggle" class="p-2 rounded-full hover:bg-slate-800/50 transition">
+                    <i id="theme-icon" class="fa-solid fa-moon text-lg"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <div class="flex items-center space-x-4 md:hidden">
+                <button id="theme-toggle-mobile" class="p-2 rounded-full hover:bg-slate-800/50 transition">
+                    <i id="theme-icon-mobile" class="fa-solid fa-moon text-lg"></i>
+                </button>
+                <button id="menu-btn" class="text-2xl focus:outline-none">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-6 pt-2 bg-slate-900 dark:bg-slate-900 bg-white border-b border-slate-800">
+            <a href="#tentang" class="block py-2 hover:text-blue-500">Tentang</a>
+            <a href="#layanan" class="block py-2 hover:text-blue-500">Keahlian</a>
+            <a href="#portofolio" class="block py-2 hover:text-blue-500">Portofolio</a>
+            <a href="#testimoni" class="block py-2 hover:text-blue-500">Testimoni</a>
+            <a href="#kontak" class="block py-2 hover:text-blue-500">Kontak</a>
+        </div>
+    </nav>
+
+    <!-- 1. HERO -->
+    <section id="hero" class="min-h-screen flex items-center justify-center pt-20 px-6 relative overflow-hidden">
+        <div class="max-w-4xl mx-auto text-center z-10">
+            <span class="px-4 py-2 rounded-full text-xs font-semibold bg-blue-500/10 text-blue-500 tracking-widest uppercase mb-4 inline-block">Selamat Datang di Portofolio Saya</span>
+            <h1 class="text-4xl md:text-6xl font-bold tracking-tight mb-6">Halo, Saya <span class="text-blue-600 dark:text-blue-500">Timothy V.B</span></h1>
+            <p class="text-lg md:text-xl text-slate-400 mb-8 max-w-2xl mx-auto font-light">Event Organizer, Desainer, Programmer, dan Animator. Saya berdedikasi menciptakan karya kreatif mulai dari animasi, video editing, hingga solusi digital yang memukau.</p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="#kontak" class="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-medium transition shadow-lg shadow-blue-600/30">Hubungi Saya</a>
+                <a href="#portofolio" class="w-full sm:w-auto px-8 py-3.5 rounded-xl border border-slate-700 hover:border-blue-500 hover:text-blue-500 font-medium transition">Lihat Karya</a>
+            </div>
+        </div>
+        <!-- Background Glow Ornamen -->
+        <div class="absolute w-96 h-96 bg-blue-600/10 rounded-full blur-3xl -top-20 -left-20 pointer-events-none"></div>
+        <div class="absolute w-96 h-96 bg-blue-600/10 rounded-full blur-3xl -bottom-20 -right-20 pointer-events-none"></div>
+    </section>
+
+    <!-- 2. TENTANG SAYA -->
+    <section id="tentang" class="py-24 px-6 border-t border-slate-800/50">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div class="relative group">
+                <div class="absolute -inset-1 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl blur opacity-30 group-hover:opacity-100 transition duration-500"></div>
+                <div class="relative rounded-2xl overflow-hidden bg-slate-800 aspect-[4/5] flex items-center justify-center border border-slate-700">
+                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80" alt="Timothy V.B" class="w-full h-full object-cover">
+                </div>
+            </div>
+            <div>
+                <h2 class="text-3xl font-bold mb-6">Tentang Saya</h2>
+                <p class="text-slate-400 mb-6 leading-relaxed">
+                    Saya Timothy, seorang kreator multidisiplin yang aktif mengerjakan animasi, video editing, desain grafis, pemrograman, serta pengelolaan event. Perpaduan antara estetika visual dan kemampuan teknis memungkinkan saya untuk mengeksekusi berbagai proyek kreatif secara menyeluruh dari konsep hingga hasil akhir.
+                </p>
+                <div class="grid grid-cols-2 gap-6 mb-8">
+                    <div>
+                        <h4 class="text-2xl font-bold text-blue-500 mb-1">4+</h4>
+                        <p class="text-sm text-slate-400">Bidang Keahlian</p>
+                    </div>
+                    <div>
+                        <h4 class="text-2xl font-bold text-blue-500 mb-1">50+</h4>
+                        <p class="text-sm text-slate-400">Proyek Selesai</p>
+                    </div>
+                </div>
+                <a href="#kontak" class="inline-flex items-center gap-2 text-blue-500 font-medium hover:underline">
+                    <span>Mari Berkolaborasi</span>
+                    <i class="fa-solid fa-arrow-right text-sm"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. KEAHLIAN / LAYANAN -->
+    <section id="layanan" class="py-24 px-6 bg-slate-800/30 border-t border-slate-800/50">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-3xl font-bold mb-4">Keahlian & Layanan</h2>
+                <p class="text-slate-400">Berbagai bidang profesional yang saya kuasai untuk membantu mewujudkan kebutuhan kreatif dan digital Anda.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Item 1 -->
+                <div class="p-8 rounded-2xl bg-slate-800/50 border border-slate-700/60 hover:border-blue-500/50 transition group">
+                    <div class="w-14 h-14 rounded-xl bg-blue-600/10 flex items-center justify-center text-blue-500 text-2xl mb-6 group-hover:bg-blue-600 group-hover:text-white transition">
+                        <i class="fa-solid fa-clapperboard"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Animation & Video Editing</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Pembuatan animasi 2D/3D serta penyuntingan video profesional untuk konten kreatif, promosi, dan sinematik.</p>
+                </div>
+                <!-- Item 2 -->
+                <div class="p-8 rounded-2xl bg-slate-800/50 border border-slate-700/60 hover:border-blue-500/50 transition group">
+                    <div class="w-14 h-14 rounded-xl bg-blue-600/10 flex items-center justify-center text-blue-500 text-2xl mb-6 group-hover:bg-blue-600 group-hover:text-white transition">
+                        <i class="fa-solid fa-calendar-days"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Event Organizer</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Perencanaan, manajemen, dan eksekusi acara baik skala korporat, komunitas, maupun hiburan secara terstruktur.</p>
+                </div>
+                <!-- Item 3 -->
+                <div class="p-8 rounded-2xl bg-slate-800/50 border border-slate-700/60 hover:border-blue-500/50 transition group">
+                    <div class="w-14 h-14 rounded-xl bg-blue-600/10 flex items-center justify-center text-blue-500 text-2xl mb-6 group-hover:bg-blue-600 group-hover:text-white transition">
+                        <i class="fa-solid fa-palette"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Desain Grafis</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Perancangan identitas visual, materi promosi, branding, dan desain antarmuka yang elegan serta estetis.</p>
+                </div>
+                <!-- Item 4 -->
+                <div class="p-8 rounded-2xl bg-slate-800/50 border border-slate-700/60 hover:border-blue-500/50 transition group">
+                    <div class="w-14 h-14 rounded-xl bg-blue-600/10 flex items-center justify-center text-blue-500 text-2xl mb-6 group-hover:bg-blue-600 group-hover:text-white transition">
+                        <i class="fa-solid fa-code"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Pemrograman</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Pengembangan website, aplikasi web responsif, dan solusi fungsional berbasis kode yang bersih dan optimal.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. PORTOFOLIO / PROYEK -->
+    <section id="portofolio" class="py-24 px-6 border-t border-slate-800/50">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-3xl font-bold mb-4">Portofolio Pilihan</h2>
+                <p class="text-slate-400">Beberapa proyek unggulan yang telah saya kerjakan di bidang animasi, desain, dan pengembangan.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Proyek 1 -->
+                <div class="rounded-2xl overflow-hidden bg-slate-800/50 border border-slate-700/60 group">
+                    <div class="aspect-video overflow-hidden bg-slate-700">
+                        <img src="https://images.unsplash.com/photo-1626544827763-d516dce335e2?auto=format&fit=crop&w=600&q=80" alt="Proyek Animasi" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs font-semibold text-blue-500 uppercase tracking-wider">Animasi & Video</span>
+                        <h3 class="text-xl font-semibold mt-2 mb-3">Motion Graphic Showreel</h3>
+                        <p class="text-slate-400 text-sm mb-4">Kompilasi proyek animasi 2D dan penyuntingan video sinematik untuk kampanye komersial.</p>
+                        <a href="#kontak" class="text-sm font-medium text-blue-500 hover:underline inline-flex items-center gap-1">Detail Proyek <i class="fa-solid fa-chevron-right text-xs"></i></a>
+                    </div>
+                </div>
+                <!-- Proyek 2 -->
+                <div class="rounded-2xl overflow-hidden bg-slate-800/50 border border-slate-700/60 group">
+                    <div class="aspect-video overflow-hidden bg-slate-700">
+                        <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=600&q=80" alt="Proyek Event" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs font-semibold text-blue-500 uppercase tracking-wider">Event Organizer</span>
+                        <h3 class="text-xl font-semibold mt-2 mb-3">Annual Creative Festival</h3>
+                        <p class="text-slate-400 text-sm mb-4">Manajemen dan koordinasi event kreatif tahunan yang dihadiri oleh ratusan peserta.</p>
+                        <a href="#kontak" class="text-sm font-medium text-blue-500 hover:underline inline-flex items-center gap-1">Detail Proyek <i class="fa-solid fa-chevron-right text-xs"></i></a>
+                    </div>
+                </div>
+                <!-- Proyek 3 -->
+                <div class="rounded-2xl overflow-hidden bg-slate-800/50 border border-slate-700/60 group">
+                    <div class="aspect-video overflow-hidden bg-slate-700">
+                        <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=600&q=80" alt="Proyek Web" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs font-semibold text-blue-500 uppercase tracking-wider">Programming & Desain</span>
+                        <h3 class="text-xl font-semibold mt-2 mb-3">Brand Identity & Web App</h3>
+                        <p class="text-slate-400 text-sm mb-4">Perancangan sistem branding lengkap dengan pengembangan aplikasi web interaktif.</p>
+                        <a href="#kontak" class="text-sm font-medium text-blue-500 hover:underline inline-flex items-center gap-1">Detail Proyek <i class="fa-solid fa-chevron-right text-xs"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. TESTIMONI (OPSIONAL) -->
+    <section id="testimoni" class="py-24 px-6 bg-slate-800/30 border-t border-slate-800/50">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-3xl font-bold mb-4">Apa Kata Mereka</h2>
+                <p class="text-slate-400">Testimoni dari klien dan rekan kerja yang pernah berkolaborasi bersama saya.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="p-8 rounded-2xl bg-slate-800/50 border border-slate-700/60 relative">
+                    <i class="fa-solid fa-quote-right absolute top-6 right-8 text-4xl text-slate-700/50"></i>
+                    <p class="text-slate-300 italic mb-6 leading-relaxed">"Timothy memiliki ketelitian yang luar biasa dalam video editing dan animasi. Proyek kami selesai tepat waktu dengan hasil visual yang sangat memuaskan."</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-blue-600/20 flex items-center justify-center font-bold text-blue-500">RD</div>
+                        <div>
+                            <h4 class="font-semibold">Rian Darmawan</h4>
+                            <p class="text-xs text-slate-400">Project Manager</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-8 rounded-2xl bg-slate-800/50 border border-slate-700/60 relative">
+                    <i class="fa-solid fa-quote-right absolute top-6 right-8 text-4xl text-slate-700/50"></i>
+                    <p class="text-slate-300 italic mb-6 leading-relaxed">"Sebagai event organizer sekaligus desainer, Timothy berhasil menghidupkan konsep acara kami menjadi kenyataan dengan tata visual yang sangat profesional."</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-blue-600/20 flex items-center justify-center font-bold text-blue-500">SA</div>
+                        <div>
+                            <h4 class="font-semibold">Siti Aisyah</h4>
+                            <p class="text-xs text-slate-400">Community Director</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. KONTAK -->
+    <section id="kontak" class="py-24 px-6 border-t border-slate-800/50">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-3xl font-bold mb-4">Hubungi Saya</h2>
+                <p class="text-slate-400">Punya proyek menarik atau ingin berdiskusi? Jangan ragu untuk mengirimkan pesan.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <div class="space-y-6 md:col-span-1">
+                    <div class="flex items-start gap-4">
+                        <div class="w-10 h-10 rounded-lg bg-blue-600/10 flex items-center justify-center text-blue-500 shrink-0">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-medium text-sm text-slate-400">Email</h4>
+                            <p class="text-sm font-semibold">timothy@email.com</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <div class="w-10 h-10 rounded-lg bg-blue-600/10 flex items-center justify-center text-blue-500 shrink-0">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-medium text-sm text-slate-400">Lokasi</h4>
+                            <p class="text-sm font-semibold">Indonesia</p>
+                        </div>
+                    </div>
+                    <!-- Tautan Media Sosial -->
+                    <div class="pt-4">
+                        <h4 class="font-medium text-sm text-slate-400 mb-3">Media Sosial</h4>
+                        <div class="flex items-center gap-3">
+                            <a href="https://instagram.com" target="_blank" class="w-10 h-10 rounded-lg bg-slate-800 border border-slate-700 flex items-center justify-center hover:bg-blue-600 hover:border-blue-600 hover:text-white transition"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="https://linkedin.com" target="_blank" class="w-10 h-10 rounded-lg bg-slate-800 border border-slate-700 flex items-center justify-center hover:bg-blue-600 hover:border-blue-600 hover:text-white transition"><i class="fa-brands fa-linkedin-in"></i></a>
+                            <a href="https://github.com" target="_blank" class="w-10 h-10 rounded-lg bg-slate-800 border border-slate-700 flex items-center justify-center hover:bg-blue-600 hover:border-blue-600 hover:text-white transition"><i class="fa-brands fa-github"></i></a>
+                            <a href="https://youtube.com" target="_blank" class="w-10 h-10 rounded-lg bg-slate-800 border border-slate-700 flex items-center justify-center hover:bg-blue-600 hover:border-blue-600 hover:text-white transition"><i class="fa-brands fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Formulir Kontak -->
+                <form class="md:col-span-2 space-y-4" onsubmit="event.preventDefault(); alert('Terima kasih! Pesan Anda telah dikirim.');">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-medium text-slate-400 mb-2">Nama Lengkap</label>
+                            <input type="text" required class="w-full px-4 py-3 rounded-xl bg-slate-800 border border-slate-700 focus:border-blue-500 focus:outline-none transition text-sm">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-medium text-slate-400 mb-2">Alamat Email</label>
+                            <input type="email" required class="w-full px-4 py-3 rounded-xl bg-slate-800 border border-slate-700 focus:border-blue-500 focus:outline-none transition text-sm">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-medium text-slate-400 mb-2">Subjek Pesan</label>
+                        <input type="text" required class="w-full px-4 py-3 rounded-xl bg-slate-800 border border-slate-700 focus:border-blue-500 focus:outline-none transition text-sm">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-medium text-slate-400 mb-2">Pesan Anda</label>
+                        <textarea rows="4" required class="w-full px-4 py-3 rounded-xl bg-slate-800 border border-slate-700 focus:border-blue-500 focus:outline-none transition text-sm"></textarea>
+                    </div>
+                    <button type="submit" class="w-full py-3.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-medium transition shadow-lg shadow-blue-600/30">Kirim Pesan</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. FOOTER -->
+    <footer class="py-8 px-6 border-t border-slate-800 text-center text-sm text-slate-500">
+        <p>&copy; 2026 Timothy V.B. Hak Cipta Dilindungi.</p>
+    </footer>
+
+    <!-- Hubungkan file JavaScript eksternal -->
+    <script src="script.js"></script>
+</body>
+</html>
